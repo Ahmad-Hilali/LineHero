@@ -1,0 +1,29 @@
+{
+	"name": "LineHero",
+	"version": "0.0.1",
+	"author": "Harsimran Singh Maan <maan.harry@gmail.com>",
+	"private":true,
+	"description": "Why wait? Standing in line is no more a task, but a choice.",
+	"repository":
+	{
+		"type": "git",
+		"url": "https://github.com/harsimranmaan/LineHero.git"
+	},
+	"contributors": 
+	[ 
+		{
+			"name": "Harsimran Singh Maan",
+			"email": "maan.harry@gmail.com"
+		} 
+	],
+	"dependencies": 
+	{
+		"express": "3.1.0",
+		"jade": "0.28.2"
+	},
+	"engines": 
+	{
+		"node": "0.10.1",
+		"npm": "1.2.15"
+	}
+}
