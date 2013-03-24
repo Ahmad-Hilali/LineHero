@@ -5,12 +5,14 @@ block content
 		include menu
 		.well	
 			ul.nav.nav-list
-				- person.forEach(function(person)){
+				- persons.forEach(function(person){
 				li
 					a.btn-large(href="#")
-						img.icon"(src=person.img)
+						img.icon(src="/img/#{person.img}")
+						|  
 						span.badge.badge-info= person.rating
+						|  
 						span= person.name
 						h6= person.time
-				-})
+				- })
 
