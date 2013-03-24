@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	.container
+		include menu
+		.well	
+			ul.nav.nav-list
+				- person.forEach(function(person)){
+				li
+					a.btn-large(href="#")
+						img.icon"(src=person.img)
+						span.badge.badge-info= person.rating
+						span= person.name
+						h6= person.time
+				-})
+
