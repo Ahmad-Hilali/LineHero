@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	.container
+		form.form-signin
+			h2.form-signin-heading Welcome to LineHero
+			input.input-block-level(type="text",placeholder="Username")
+			input.input-block-level(type="text",placeholder="Password")
+			a.btn.input-block-level(href="/")
+				i.icon-user
+				span Sign in
+			br
+			a.btn.btn-primary.input-block-level(href="/home/john")
+				i.icon-user
+				span Sign in with Facebook
+			br
+			a.btn.btn-info.input-block-level(href="/home/maria")
+				i.icon-user
+				span Sign in with Twitter
