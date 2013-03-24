@@ -3,16 +3,30 @@ extends layout
 block content
 	.container
 		include menu
-		.well	
+		#pay.modal.hide.fade(tabindex="-1",role="dialog",aria-labelledby="labelHead",aria-hidden="true")
+			.modal-header
+				button.close(type="button",data-dismiss="modal",aria-hidden="true") x
+				h6#labelHead Make a bid
+			.modal-body
+				p 
+					|Amount:
+					.input-prepend
+						span.add-on $
+						input.span2(type="text",placeholder="5.00")
+			.modal-footer
+				button.btn(data-dismiss="modal",aria-hidden="true") Cancel
+				button.btn.btn-primary(data-dismiss="modal",aria-hidden="true") Bid
+		.well
 			ul.nav.nav-list
 				- persons.forEach(function(person){
 				li
-					a.btn-large(href="#")
+					a.btn-large(href="#pay",data-toggle="modal",role="button")
 						img.icon(src="/img/#{person.img}")
 						|  
 						span.badge.badge-info= person.rating
 						|  
 						span= person.name
-						h6= person.time person.location
+						- var t=person.time + " "+person.location +" ("+person.num+" ahead)";
+						h6= t
 				- })
 
