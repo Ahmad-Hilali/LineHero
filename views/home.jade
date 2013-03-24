@@ -16,6 +16,16 @@ block content
 			.modal-footer
 				button.btn(data-dismiss="modal",aria-hidden="true") Cancel
 				button.btn.btn-primary(data-dismiss="modal",aria-hidden="true") Bid
+		#accept.modal.hide.fade(tabindex="-1",role="dialog",aria-labelledby="accHead",aria-hidden="true")
+			.modal-header
+				button.close(type="button",data-dismiss="modal",aria-hidden="true") x
+				h6#accHead Bid Accepted
+			.modal-body
+				p 
+					| Your bid has been accepted. You can now walk to the person.
+			.modal-footer
+				button.btn(data-dismiss="modal",aria-hidden="true") Cancel
+				a#mPay.btn.btn-primary(href="/recommend", disabled) Make Payment
 		.well
 			ul.nav.nav-list
 				- persons.forEach(function(person){
@@ -29,4 +39,6 @@ block content
 						- var t=person.time + " "+person.location +" ("+person.num+" ahead)";
 						h6= t
 				- })
+
+
 

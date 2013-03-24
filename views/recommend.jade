@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	.container
+		include menu
+		.alert.alert-success
+			strong Payment successful!
+			br
+			| Thank you for using Linehero. Have a nice day.
+		br
+		a.btn.input-block-level(href="/home")
+			i.icon-home
+			span Go to home
+		br
+		a.btn.btn-primary.input-block-level(href="index")
+			i.icon-glass
+			span Exit
